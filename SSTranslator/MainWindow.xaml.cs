@@ -97,7 +97,17 @@ namespace SSTranslator
         {
             var image = Google.Cloud.Vision.V1.Image.FromFile(e.FullPath);
             var text = _imageAnnotator.DetectDocumentText(image);
+            if (text == null)
+            {
+                Dispatcher.BeginInvoke(new Action(() =>
+                {
+                    TextBoxDetected.Text = "Text was not detected from the image.";
+                }));
+                return;
+            }
+
             var translated = _translation.TranslateText(text.Text, _language.TranslateCode);
+
             lock (_translateLock)
             {
                 Dispatcher.BeginInvoke(new Action(() =>
