@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections;
+using System.Collections.Generic;
 using System.IO;
 using System.Media;
 using System.Windows;
@@ -89,23 +91,28 @@ namespace SSTranslator
             }
         }
 
+        private object _translateLock = new object();
+
         private void Watcher_Created(object sender, FileSystemEventArgs e)
         {
             var image = Google.Cloud.Vision.V1.Image.FromFile(e.FullPath);
             var text = _imageAnnotator.DetectDocumentText(image);
             var translated = _translation.TranslateText(text.Text, _language.TranslateCode);
-            Dispatcher.BeginInvoke(new Action(() =>
+            lock (_translateLock)
             {
-                TextBoxDetected.Text = text.Text;
-                TextBoxTranslated.Text = translated.TranslatedText;
-            }));
+                Dispatcher.BeginInvoke(new Action(() =>
+                {
+                    TextBoxDetected.Text = text.Text;
+                    TextBoxTranslated.Text = translated.TranslatedText;
+                }));
 
-            if (_play)
-            {
-                var audio = TextToSpeech(translated.TranslatedText);
-                var player = new SoundPlayer(new MemoryStream(audio));
-                player.Play();
-                player.Dispose();
+                if (_play)
+                {
+                    var audio = TextToSpeech(translated.TranslatedText);
+                    var player = new SoundPlayer(new MemoryStream(audio));
+                    player.Play();
+                    player.Dispose();
+                }
             }
         }
 
