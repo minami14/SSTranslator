@@ -4,12 +4,12 @@ SSTranslator automatically translates the text shown in the screenshot.
 SSTranslatorはスクリーンショット撮影時に画像に含まれているテキストを自動で翻訳するアプリケーションです。
 
 # Install
-Download and extract the SSTranslator zip file from Release or clone and build this repository.
+Download and extract the SSTranslator zip file from [Release](https://github.com/minami14/SSTranslator/releases) or clone and build this repository.
 
 Create a GCP service account referring to [Getting Started with Authentication](https://cloud.google.com/docs/authentication/getting-started) and set the environment variable GOOGLE_APPLICATION_CREDENTIALS.
 
 
-ReleaseからSSTranslatorをダウンロードして展開する、またはこのリポジトリをクローンしてビルドする。
+[Release](https://github.com/minami14/SSTranslator/releases)からSSTranslatorをダウンロードして展開する、またはこのリポジトリをクローンしてビルドする。
 
 [Getting Started with Authentication](https://cloud.google.com/docs/authentication/getting-started)を参考にGCPのサービスアカウントを作成し，環境変数GOOGLE_APPLICATION_CREDENTIALSを設定する。
 
