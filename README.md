@@ -37,3 +37,10 @@ SSTranslator.exeを起動してスクリーンショットが保存されるフ�
 If you find a bug or have a feature that you want to add, please make an issue or pull request.
 
 不具合を見つけた場合や追加してほしい機能がなどがある場合にはIssueかプルリクエストを作成してください。
+
+# License
+MIT License
+
+SSTranslator uses the following library.
+
+[google-cloud-dotnet](https://github.com/googleapis/google-cloud-dotnet/blob/master/LICENSE)
