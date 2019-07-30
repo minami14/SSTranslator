@@ -1,7 +1,7 @@
 # SSTranslator
-SSTranslator automatically translates the text shown in the screenshot.
+SSTranslator automatically detects and translates text from the image when taking a screenshot.
 
-SSTranslatorはスクリーンショット撮影時に画像に含まれているテキストを自動で翻訳するアプリケーションです。
+SSTranslatorはスクリーンショット撮影時に自動的に画像からテキストを検出して翻訳するアプリケーションです。
 
 # Install
 * Download and extract the SSTranslator zip file from [Release](https://github.com/minami14/SSTranslator/releases) or clone and build this repository.
@@ -23,8 +23,8 @@ SSTranslatorはスクリーンショット撮影時に画像に含まれてい�
 * 翻訳結果の音声を再生したくない場合は左上のチェックボックスをオフにします。
 * スクリーンショットを撮影すると自動的に翻訳されて結果がテキストボックスに表示され，音声で再生されます。
 
-# Find bugs? or want to add feature?
-If you find a bug or have a feature that you want to add, please make an issue or pull request.
+# Find bugs? or want to add features?
+If you find a bug or have features that you want to add, please make an issue or pull request.
 
 不具合を見つけた場合や追加してほしい機能などがある場合にはIssueかプルリクエストを作成してください。
 
