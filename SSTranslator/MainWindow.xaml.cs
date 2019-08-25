@@ -1,12 +1,12 @@
-﻿using System;
+﻿using Google.Cloud.TextToSpeech.V1;
+using Google.Cloud.Translation.V2;
+using Google.Cloud.Vision.V1;
+using SSTranslator.Properties;
+using System;
 using System.IO;
 using System.Media;
 using System.Windows;
 using System.Windows.Controls;
-using Google.Cloud.TextToSpeech.V1;
-using Google.Cloud.Translation.V2;
-using Google.Cloud.Vision.V1;
-using SSTranslator.Properties;
 
 namespace SSTranslator
 {
